@@ -21,20 +21,20 @@ function Inbox() {
           </div>
           <div className='inbox-nav2'>
             <div>
-              <button><i class="fa fa-refresh"></i>Refresh</button>
-              <button><i class="fa fa-eye"></i></button>
-              <button><i class="fa fa-exclamation"></i></button> 
-              <button><i class="fa fa-trash-o"></i> </button> 
+              <button><i className="fa fa-refresh"></i>Refresh</button>
+              <button><i className="fa fa-eye"></i></button>
+              <button><i className="fa fa-exclamation"></i></button> 
+              <button><i className="fa fa-trash-o"></i> </button> 
             </div>
             <div>
-              <button><i class="fa fa-eye"></i></button>
-              <button><i class="fa fa-exclamation"></i></button>   
+              <button><i className="fa fa-eye"></i></button>
+              <button><i className="fa fa-exclamation"></i></button>   
             </div>
           </div>
 
           {
             data.map((dataItem)=>{
-              return <Mail name = {dataItem.name} subject = {dataItem.subject} time = {dataItem.time}/>
+              return <Mail key={dataItem.id} name = {dataItem.name} subject = {dataItem.subject} time = {dataItem.time}/>
             })
           }
       </div>

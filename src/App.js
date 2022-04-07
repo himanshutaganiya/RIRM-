@@ -1,20 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Vnavbar from './components/Sidebar';
-import Sidebar from './components/Sidebar';
-import Sidemenu from './components/Sidemenu';
-import Inbox from './components/Inbox';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Dashboard from './components/Dashboard';
+import Login from './components/Login';
 
 function App() {
   return (
-    <div>
-      <Sidebar/>
-      <Navbar/>
-      <Sidemenu/>
-      <Inbox/>
-      
-    </div>
+    <Router>
+        <Routes>
+          <Route exact path="/" element = {<Login/>}></Route>
+          <Route exact path="/dashboard" element = {<Dashboard/>}></Route>
+        </Routes>
+    </Router>
   );
 }
 
